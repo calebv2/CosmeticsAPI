@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75987c4b69951b4eb385099daa12749, type: 3}
+  m_Name: Fantasy Skin Palette
+  m_EditorClassIdentifier: 
+  packId: caleb.skin-fantasy
+  displayName: Fantasy Skin Tones
+  version: 1.0.0
+  templateId: 38247
+  tones:
+  - sku: caleb.skin-fantasy.frost
+    displayName: Frost
+    shadows: {r: 0.6313726, g: 0.7058824, b: 0.7294118, a: 1}
+    midtones: {r: 0.80784315, g: 0.90588236, b: 0.93333334, a: 1}
+    highlights: {r: 0.84313726, g: 0.92156863, b: 0.94509804, a: 1}
+  - sku: caleb.skin-fantasy.slate
+    displayName: Slate
+    shadows: {r: 0.34117648, g: 0.4, b: 0.45882353, a: 1}
+    midtones: {r: 0.43529412, g: 0.5137255, b: 0.5882353, a: 1}
+    highlights: {r: 0.5372549, g: 0.6, b: 0.6627451, a: 1}
+  - sku: caleb.skin-fantasy.deep-ocean
+    displayName: Deep Ocean
+    shadows: {r: 0.11764706, g: 0.27058825, b: 0.4117647, a: 1}
+    midtones: {r: 0.15294118, g: 0.34509805, b: 0.5294118, a: 1}
+    highlights: {r: 0.30588236, g: 0.4627451, b: 0.6156863, a: 1}
+  - sku: caleb.skin-fantasy.azure
+    displayName: Azure
+    shadows: {r: 0.23137255, g: 0.4392157, b: 0.59607846, a: 1}
+    midtones: {r: 0.29803923, g: 0.56078434, b: 0.7647059, a: 1}
+    highlights: {r: 0.42352942, g: 0.6392157, b: 0.80784315, a: 1}
+  - sku: caleb.skin-fantasy.jade
+    displayName: Jade
+    shadows: {r: 0.25490198, g: 0.5137255, b: 0.42352942, a: 1}
+    midtones: {r: 0.3254902, g: 0.65882355, b: 0.54509807, a: 1}
+    highlights: {r: 0.44705883, g: 0.72156864, b: 0.627451, a: 1}
+  - sku: caleb.skin-fantasy.emerald
+    displayName: Emerald
+    shadows: {r: 0.13333334, g: 0.34117648, b: 0.26666668, a: 1}
+    midtones: {r: 0.17254902, g: 0.4392157, b: 0.34117648, a: 1}
+    highlights: {r: 0.32156864, g: 0.5411765, b: 0.45882353, a: 1}
+  - sku: caleb.skin-fantasy.moss
+    displayName: Moss
+    shadows: {r: 0.3529412, g: 0.4117647, b: 0.23529412, a: 1}
+    midtones: {r: 0.4509804, g: 0.5254902, b: 0.3019608, a: 1}
+    highlights: {r: 0.54901963, g: 0.6117647, b: 0.42745098, a: 1}
+  - sku: caleb.skin-fantasy.lilac
+    displayName: Lilac
+    shadows: {r: 0.54901963, g: 0.45882353, b: 0.61960787, a: 1}
+    midtones: {r: 0.7058824, g: 0.5882353, b: 0.7921569, a: 1}
+    highlights: {r: 0.7607843, g: 0.6627451, b: 0.83137256, a: 1}
+  - sku: caleb.skin-fantasy.amethyst
+    displayName: Amethyst
+    shadows: {r: 0.36078432, g: 0.26666668, b: 0.47058824, a: 1}
+    midtones: {r: 0.4627451, g: 0.34117648, b: 0.6039216, a: 1}
+    highlights: {r: 0.56078434, g: 0.45882353, b: 0.6745098, a: 1}
+  - sku: caleb.skin-fantasy.plum
+    displayName: Plum
+    shadows: {r: 0.30588236, g: 0.20392157, b: 0.3019608, a: 1}
+    midtones: {r: 0.39215687, g: 0.2627451, b: 0.3882353, a: 1}
+    highlights: {r: 0.5019608, g: 0.39607844, b: 0.49803922, a: 1}
+  - sku: caleb.skin-fantasy.rose-quartz
+    displayName: Rose Quartz
+    shadows: {r: 0.67058825, g: 0.46666667, b: 0.5568628, a: 1}
+    midtones: {r: 0.85882354, g: 0.6, b: 0.7137255, a: 1}
+    highlights: {r: 0.88235295, g: 0.67058825, b: 0.7647059, a: 1}
+  - sku: caleb.skin-fantasy.coral
+    displayName: Coral
+    shadows: {r: 0.627451, g: 0.38039216, b: 0.3254902, a: 1}
+    midtones: {r: 0.8039216, g: 0.4862745, b: 0.41568628, a: 1}
+    highlights: {r: 0.8392157, g: 0.5803922, b: 0.52156866, a: 1}
+  - sku: caleb.skin-fantasy.ember
+    displayName: Ember
+    shadows: {r: 0.46666667, g: 0.23137255, b: 0.18431373, a: 1}
+    midtones: {r: 0.6, g: 0.29803923, b: 0.23529412, a: 1}
+    highlights: {r: 0.67058825, g: 0.42352942, b: 0.37254903, a: 1}
+  - sku: caleb.skin-fantasy.silver
+    displayName: Silver
+    shadows: {r: 0.5137255, g: 0.53333336, b: 0.5568628, a: 1}
+    midtones: {r: 0.65882355, g: 0.6862745, b: 0.7137255, a: 1}
+    highlights: {r: 0.72156864, g: 0.7411765, b: 0.7647059, a: 1}
+  - sku: caleb.skin-fantasy.obsidian-1
+    displayName: Obsidian
+    shadows: {r: 0.16078432, g: 0.16078432, b: 0.2, a: 1}
+    midtones: {r: 0.20784314, g: 0.20392157, b: 0.25490198, a: 1}
+    highlights: {r: 0.34901962, g: 0.34901962, b: 0.3882353, a: 1}
+  - sku: caleb.skin-fantasy.gold
+    displayName: Gold
+    shadows: {r: 0.6039216, g: 0.49411765, b: 0.27058825, a: 1}
+    midtones: {r: 0.77254903, g: 0.63529414, b: 0.34901962, a: 1}
+    highlights: {r: 0.8117647, g: 0.7019608, b: 0.46666667, a: 1}

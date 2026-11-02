@@ -1,0 +1,46 @@
+{
+    "schemaVersion": 1,
+    "packId": "caleb.wayfarer",
+    "displayName": "Wayfarer Wardrobe",
+    "version": "1.0.0",
+    "bundleFile": "assets.bundle",
+    "bundleSha256": "f34eadc4b699b98cdd1b0e07e318ea34b2c34b6adae4e8652c44143bfbb9df73",
+    "cosmetics": [
+        {
+            "sku": "mod-clear-shirt-19920",
+            "displayName": "Veilweave Shirt",
+            "asset": "",
+            "templateId": 28346,
+            "expectedId": 63925,
+            "emptyVisual": true,
+            "hideInFirstPerson": false
+        },
+        {
+            "sku": "mod-oathbound-harness-1",
+            "displayName": "Oathbound Harness",
+            "asset": "item-1",
+            "templateId": 56783,
+            "expectedId": 63704,
+            "emptyVisual": false,
+            "hideInFirstPerson": false
+        },
+        {
+            "sku": "mod-trailwarden-kilt-1",
+            "displayName": "Trailwarden Kilt",
+            "asset": "item-2",
+            "templateId": 15368,
+            "expectedId": 52837,
+            "emptyVisual": false,
+            "hideInFirstPerson": false
+        },
+        {
+            "sku": "mod-ironweave-hauberk-1",
+            "displayName": "Ironweave Hauberk",
+            "asset": "item-3",
+            "templateId": 37751,
+            "expectedId": 15096,
+            "emptyVisual": false,
+            "hideInFirstPerson": false
+        }
+    ]
+}

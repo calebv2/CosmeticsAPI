@@ -1,0 +1,16 @@
+/Build/
+/Builds/
+/Library/
+/Temp/
+/Logs/
+/Obj/
+/UserSettings/
+/Releases/
+.vs/
+bin/
+obj/
+*.log
+*.pdb
+*.rsp
+*.user
+*.suo

@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 2,
+  "packId": "caleb.skin-natural",
+  "displayName": "Natural Skin Tones",
+  "version": "1.0.0",
+  "bundleFile": null,
+  "bundleSha256": null,
+  "cosmetics": [
+    {
+      "sku": "caleb.skin-natural.porcelain-cool",
+      "displayName": "Porcelain Cool",
+      "templateId": 38247,
+      "expectedId": 55765,
+      "skinTone": {
+        "shadows": "#D3B0A3",
+        "midtones": "#F2D7CC",
+        "highlights": "#F4D9CD"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.porcelain-neutral",
+      "displayName": "Porcelain Neutral",
+      "templateId": 38247,
+      "expectedId": 39423,
+      "skinTone": {
+        "shadows": "#D2AB91",
+        "midtones": "#F1D1B5",
+        "highlights": "#F3D4B9"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.porcelain-warm",
+      "displayName": "Porcelain Warm",
+      "templateId": 38247,
+      "expectedId": 8283,
+      "skinTone": {
+        "shadows": "#D3A786",
+        "midtones": "#F2CCA7",
+        "highlights": "#F4D0AD"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.ivory-rose",
+      "displayName": "Ivory Rose",
+      "templateId": 38247,
+      "expectedId": 43031,
+      "skinTone": {
+        "shadows": "#CB9D8D",
+        "midtones": "#E9BFB0",
+        "highlights": "#ECC5B5"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.ivory-neutral",
+      "displayName": "Ivory Neutral",
+      "templateId": 38247,
+      "expectedId": 23713,
+      "skinTone": {
+        "shadows": "#C8997E",
+        "midtones": "#E6BB9E",
+        "highlights": "#EAC1A6"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.ivory-golden",
+      "displayName": "Ivory Golden",
+      "templateId": 38247,
+      "expectedId": 56227,
+      "skinTone": {
+        "shadows": "#C99670",
+        "midtones": "#E7B78C",
+        "highlights": "#EABE96"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.fair-rose-2",
+      "displayName": "Fair Rose",
+      "templateId": 38247,
+      "expectedId": 46719,
+      "skinTone": {
+        "shadows": "#BF8B7B",
+        "midtones": "#DCA99A",
+        "highlights": "#E1B2A2"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.fair-peach-1",
+      "displayName": "Fair Peach",
+      "templateId": 38247,
+      "expectedId": 60418,
+      "skinTone": {
+        "shadows": "#C38B6C",
+        "midtones": "#E0AA87",
+        "highlights": "#E4B392"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.fair-olive",
+      "displayName": "Fair Olive",
+      "templateId": 38247,
+      "expectedId": 37058,
+      "skinTone": {
+        "shadows": "#B2916E",
+        "midtones": "#CDB18A",
+        "highlights": "#D4B994"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.light-neutral",
+      "displayName": "Light Neutral",
+      "templateId": 38247,
+      "expectedId": 28348,
+      "skinTone": {
+        "shadows": "#AF7F63",
+        "midtones": "#C99B7C",
+        "highlights": "#D1A688"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.light-warm",
+      "displayName": "Light Warm",
+      "templateId": 38247,
+      "expectedId": 1864,
+      "skinTone": {
+        "shadows": "#B37D5A",
+        "midtones": "#CE9870",
+        "highlights": "#D5A37E"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.light-olive",
+      "displayName": "Light Olive",
+      "templateId": 38247,
+      "expectedId": 61676,
+      "skinTone": {
+        "shadows": "#9D7F5C",
+        "midtones": "#B59B73",
+        "highlights": "#BFA681"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.sand-cool",
+      "displayName": "Sand Cool",
+      "templateId": 38247,
+      "expectedId": 40894,
+      "skinTone": {
+        "shadows": "#9A715E",
+        "midtones": "#B18A76",
+        "highlights": "#BC9783"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.sand-neutral",
+      "displayName": "Sand Neutral",
+      "templateId": 38247,
+      "expectedId": 41258,
+      "skinTone": {
+        "shadows": "#9D6F53",
+        "midtones": "#B48768",
+        "highlights": "#BE9577"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.sand-golden",
+      "displayName": "Sand Golden",
+      "templateId": 38247,
+      "expectedId": 39126,
+      "skinTone": {
+        "shadows": "#A46F48",
+        "midtones": "#BD875A",
+        "highlights": "#C6956B"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.honey",
+      "displayName": "Honey",
+      "templateId": 38247,
+      "expectedId": 24195,
+      "skinTone": {
+        "shadows": "#9D6440",
+        "midtones": "#B47A50",
+        "highlights": "#BE8962"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.amber",
+      "displayName": "Amber",
+      "templateId": 38247,
+      "expectedId": 8647,
+      "skinTone": {
+        "shadows": "#935B36",
+        "midtones": "#A96F44",
+        "highlights": "#B58058"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.tan-rose",
+      "displayName": "Tan Rose",
+      "templateId": 38247,
+      "expectedId": 63371,
+      "skinTone": {
+        "shadows": "#906151",
+        "midtones": "#A67665",
+        "highlights": "#B28675"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.tan-olive",
+      "displayName": "Tan Olive",
+      "templateId": 38247,
+      "expectedId": 7813,
+      "skinTone": {
+        "shadows": "#7F6242",
+        "midtones": "#927753",
+        "highlights": "#A18765"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.medium-neutral",
+      "displayName": "Medium Neutral",
+      "templateId": 38247,
+      "expectedId": 59499,
+      "skinTone": {
+        "shadows": "#81533E",
+        "midtones": "#94654E",
+        "highlights": "#A37761"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.medium-warm",
+      "displayName": "Medium Warm",
+      "templateId": 38247,
+      "expectedId": 49535,
+      "skinTone": {
+        "shadows": "#814D31",
+        "midtones": "#945E3D",
+        "highlights": "#A37152"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.medium-cool",
+      "displayName": "Medium Cool",
+      "templateId": 38247,
+      "expectedId": 26709,
+      "skinTone": {
+        "shadows": "#754E42",
+        "midtones": "#865F53",
+        "highlights": "#977265"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.umber-golden",
+      "displayName": "Umber Golden",
+      "templateId": 38247,
+      "expectedId": 27741,
+      "skinTone": {
+        "shadows": "#6F4428",
+        "midtones": "#805332",
+        "highlights": "#926849"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.umber-neutral",
+      "displayName": "Umber Neutral",
+      "templateId": 38247,
+      "expectedId": 9527,
+      "skinTone": {
+        "shadows": "#66402E",
+        "midtones": "#754E39",
+        "highlights": "#88644F"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.umber-cool",
+      "displayName": "Umber Cool",
+      "templateId": 38247,
+      "expectedId": 30181,
+      "skinTone": {
+        "shadows": "#5B3E36",
+        "midtones": "#694C43",
+        "highlights": "#7E6257"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.deep-warm",
+      "displayName": "Deep Warm",
+      "templateId": 38247,
+      "expectedId": 52794,
+      "skinTone": {
+        "shadows": "#553221",
+        "midtones": "#623D29",
+        "highlights": "#785541"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.deep-neutral",
+      "displayName": "Deep Neutral",
+      "templateId": 38247,
+      "expectedId": 34990,
+      "skinTone": {
+        "shadows": "#4C3026",
+        "midtones": "#573B30",
+        "highlights": "#6F5347"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.deep-cool",
+      "displayName": "Deep Cool",
+      "templateId": 38247,
+      "expectedId": 18274,
+      "skinTone": {
+        "shadows": "#46302A",
+        "midtones": "#503A34",
+        "highlights": "#68524A"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.rich-espresso",
+      "displayName": "Rich Espresso",
+      "templateId": 38247,
+      "expectedId": 24465,
+      "skinTone": {
+        "shadows": "#3C261D",
+        "midtones": "#452E24",
+        "highlights": "#5F483D"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.deep-mahogany",
+      "displayName": "Deep Mahogany",
+      "templateId": 38247,
+      "expectedId": 9313,
+      "skinTone": {
+        "shadows": "#39221C",
+        "midtones": "#412923",
+        "highlights": "#5C443C"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.deep-olive",
+      "displayName": "Deep Olive",
+      "templateId": 38247,
+      "expectedId": 32074,
+      "skinTone": {
+        "shadows": "#342B1D",
+        "midtones": "#3C3424",
+        "highlights": "#574D3D"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-natural.soft-ebony-2",
+      "displayName": "Soft Ebony",
+      "templateId": 38247,
+      "expectedId": 21777,
+      "skinTone": {
+        "shadows": "#2A201C",
+        "midtones": "#302723",
+        "highlights": "#4D423C"
+      },
+      "isSkinTone": true
+    }
+  ]
+}

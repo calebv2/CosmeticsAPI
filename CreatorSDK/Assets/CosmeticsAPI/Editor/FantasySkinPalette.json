@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 2,
+  "packId": "caleb.skin-fantasy",
+  "displayName": "Fantasy Skin Tones",
+  "version": "1.0.0",
+  "bundleFile": null,
+  "bundleSha256": null,
+  "cosmetics": [
+    {
+      "sku": "caleb.skin-fantasy.frost",
+      "displayName": "Frost",
+      "templateId": 38247,
+      "expectedId": 47737,
+      "skinTone": {
+        "shadows": "#A1B4BA",
+        "midtones": "#CEE7EE",
+        "highlights": "#D7EBF1"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.slate",
+      "displayName": "Slate",
+      "templateId": 38247,
+      "expectedId": 18704,
+      "skinTone": {
+        "shadows": "#576675",
+        "midtones": "#6F8396",
+        "highlights": "#8999A9"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.deep-ocean",
+      "displayName": "Deep Ocean",
+      "templateId": 38247,
+      "expectedId": 30602,
+      "skinTone": {
+        "shadows": "#1E4569",
+        "midtones": "#275887",
+        "highlights": "#4E769D"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.azure",
+      "displayName": "Azure",
+      "templateId": 38247,
+      "expectedId": 51862,
+      "skinTone": {
+        "shadows": "#3B7098",
+        "midtones": "#4C8FC3",
+        "highlights": "#6CA3CE"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.jade",
+      "displayName": "Jade",
+      "templateId": 38247,
+      "expectedId": 61239,
+      "skinTone": {
+        "shadows": "#41836C",
+        "midtones": "#53A88B",
+        "highlights": "#72B8A0"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.emerald",
+      "displayName": "Emerald",
+      "templateId": 38247,
+      "expectedId": 58143,
+      "skinTone": {
+        "shadows": "#225744",
+        "midtones": "#2C7057",
+        "highlights": "#528A75"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.moss",
+      "displayName": "Moss",
+      "templateId": 38247,
+      "expectedId": 2879,
+      "skinTone": {
+        "shadows": "#5A693C",
+        "midtones": "#73864D",
+        "highlights": "#8C9C6D"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.lilac",
+      "displayName": "Lilac",
+      "templateId": 38247,
+      "expectedId": 43100,
+      "skinTone": {
+        "shadows": "#8C759E",
+        "midtones": "#B496CA",
+        "highlights": "#C2A9D4"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.amethyst",
+      "displayName": "Amethyst",
+      "templateId": 38247,
+      "expectedId": 51132,
+      "skinTone": {
+        "shadows": "#5C4478",
+        "midtones": "#76579A",
+        "highlights": "#8F75AC"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.plum",
+      "displayName": "Plum",
+      "templateId": 38247,
+      "expectedId": 5041,
+      "skinTone": {
+        "shadows": "#4E344D",
+        "midtones": "#644363",
+        "highlights": "#80657F"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.rose-quartz",
+      "displayName": "Rose Quartz",
+      "templateId": 38247,
+      "expectedId": 28656,
+      "skinTone": {
+        "shadows": "#AB778E",
+        "midtones": "#DB99B6",
+        "highlights": "#E1ABC3"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.coral",
+      "displayName": "Coral",
+      "templateId": 38247,
+      "expectedId": 51516,
+      "skinTone": {
+        "shadows": "#A06153",
+        "midtones": "#CD7C6A",
+        "highlights": "#D69485"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.ember",
+      "displayName": "Ember",
+      "templateId": 38247,
+      "expectedId": 52650,
+      "skinTone": {
+        "shadows": "#773B2F",
+        "midtones": "#994C3C",
+        "highlights": "#AB6C5F"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.silver",
+      "displayName": "Silver",
+      "templateId": 38247,
+      "expectedId": 7066,
+      "skinTone": {
+        "shadows": "#83888E",
+        "midtones": "#A8AFB6",
+        "highlights": "#B8BDC3"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.obsidian-1",
+      "displayName": "Obsidian",
+      "templateId": 38247,
+      "expectedId": 23024,
+      "skinTone": {
+        "shadows": "#292933",
+        "midtones": "#353441",
+        "highlights": "#595963"
+      },
+      "isSkinTone": true
+    },
+    {
+      "sku": "caleb.skin-fantasy.gold",
+      "displayName": "Gold",
+      "templateId": 38247,
+      "expectedId": 63665,
+      "skinTone": {
+        "shadows": "#9A7E45",
+        "midtones": "#C5A259",
+        "highlights": "#CFB377"
+      },
+      "isSkinTone": true
+    }
+  ]
+}
