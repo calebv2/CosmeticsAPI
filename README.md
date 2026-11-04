@@ -10,6 +10,7 @@ Supports skinned clothing, rigid accessories, transparent clothing selections, a
 
 | File | Contents |
 |---|---|
+| `CosmeticsAPI-AllCosmetics-0.2.1.zip` | Ready-to-copy Client/Server folders with the API, all four Wayfarer outfits, and all 48 skin colours. Use this to install everything for play. |
 | `CosmeticsAPI-Kit-0.2.1.zip` | Client/server runtime, Unity creator package, Wayfarer sample outfits, optional skin palettes, and instructions. |
 | `CosmeticsAPI-Wayfarer-Update-0.2.1.zip` | Runtime and updated Wayfarer pack merged into ready-to-copy Client/Server folders. |
 | `CosmeticsAPI-Runtime-0.2.1.zip` | The two runtime DLLs for installing or updating the API. |
@@ -21,6 +22,10 @@ Supports skinned clothing, rigid accessories, transparent clothing selections, a
 ## Install
 
 Requires **PC A Township Tale**, **MelonLoader 0.7.3**, and a server where you can install mods. The creator tools use **Unity 2020.3.23f1**, Built-in 3D.
+
+For the simplest complete installation, download **CosmeticsAPI-AllCosmetics-0.2.1.zip**. Copy **both `Mods` and `UserData` from its Client folder** into the client game folder. Copy **both `Mods` and `UserData` from its Server folder** into the actual server game folder. Merge folders and replace matching files, then restart. The API DLL alone adds no outfits or skin colours.
+
+When installing components separately:
 
 1. Close the game and server.
 2. Copy the **Client** `CosmeticsAPI.dll` into the client's `Mods` folder.
