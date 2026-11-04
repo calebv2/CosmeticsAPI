@@ -8,13 +8,13 @@ using MelonLoader;
 using MelonLoader.Utils;
 using UnityEngine;
 
-[assembly:MelonInfo(typeof(ATT.Cosmetics.ApiCore),"CosmeticsAPI","0.2.2","caleb")]
+[assembly:MelonInfo(typeof(ATT.Cosmetics.ApiCore),"CosmeticsAPI","0.2.3","caleb")]
 [assembly:MelonGame("Alta","A Township Tale")]
 namespace ATT.Cosmetics
 {
  public static class CosmeticsApi
  {
-  public const string Version="0.2.2";
+  public const string Version="0.2.3";
   public static string PacksDirectory=>Path.Combine(MelonEnvironment.UserDataDirectory,"CosmeticsAPI","Packs");
   /// <summary>Call from Melon initialization on the main thread. The client loader is never called by the server.</summary>
   public static PackHandle RegisterPack(PackManifest manifest,Func<byte[]> clientBundleLoader)
@@ -25,14 +25,14 @@ namespace ATT.Cosmetics
   {
    ApiCore.CheckThread();folder=Path.GetFullPath(folder);
    var path=Path.Combine(folder,"pack.json");if(new FileInfo(path).Length>1024*1024)throw new InvalidDataException("Pack manifest exceeds 1 MiB");
-   var manifest=JsonUtility.FromJson<PackManifest>(File.ReadAllText(path));ManifestRules.Validate(manifest);
+   var manifest=PackJson.ReadManifest(File.ReadAllText(path));
    string bundlePath=Path.Combine(folder,manifest.bundleFile??"assets.bundle");
    return RegisterPack(manifest,()=>File.ReadAllBytes(bundlePath));
   }
   public static PackHandle RegisterEmbedded(Assembly assembly,string manifestResource,string bundleResource)
   {
    if(assembly==null)throw new ArgumentNullException(nameof(assembly));
-   var manifest=JsonUtility.FromJson<PackManifest>(System.Text.Encoding.UTF8.GetString(ReadResource(assembly,manifestResource)));
+   var manifest=PackJson.ReadManifest(System.Text.Encoding.UTF8.GetString(ReadResource(assembly,manifestResource)));
    return RegisterPack(manifest,()=>ReadResource(assembly,bundleResource));
   }
   static byte[] ReadResource(Assembly assembly,string name)

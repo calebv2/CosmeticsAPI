@@ -2,12 +2,12 @@
 
 Custom cosmetics and Unity creator tools for **A Township Tale on PC**.
 
-**[Download v0.2.2](https://github.com/calebv2/CosmeticsAPI/releases/tag/v0.2.2)** · [Creator guide](docs/CREATOR-GUIDE.md) · [C# API](docs/API-REFERENCE.md)
+**[Download v0.2.3](https://github.com/calebv2/CosmeticsAPI/releases/tag/v0.2.3)** · [Creator guide](docs/CREATOR-GUIDE.md) · [C# API](docs/API-REFERENCE.md)
 
 ## Install
 
 1. Close the game and stop the server.
-2. Download `CosmeticsAPI-Runtime-0.2.2.zip`.
+2. Download `CosmeticsAPI-Runtime-0.2.3.zip`.
 3. Copy `Client/Mods/CosmeticsAPI.dll` into the client's **Mods** folder.
 4. Copy `Server/Mods/CosmeticsAPI.dll` into the server's **Mods** folder.
 5. Start the server and client. Every viewing player needs the client build.
