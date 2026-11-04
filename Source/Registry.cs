@@ -38,9 +38,11 @@ namespace ATT.Cosmetics
   static readonly List<Pack> packs=new List<Pack>();
   static readonly Dictionary<uint,Entry> ready=new Dictionary<uint,Entry>();
   static readonly PackIdentityIndex identities=new PackIdentityIndex();
+  internal static readonly DefinitionReadiness<ICustomizationDefinition> Definitions=new DefinitionReadiness<ICustomizationDefinition>();
   static bool pumping;static Task catalog;static PurchasableMap map;
   internal static IEnumerable<Entry> Entries=>ready.Values;
   internal static bool Ready=>ready.Count!=0;
+  internal static bool HasPacks=>packs.Count!=0;
   internal static Entry Find(uint id){Entry e;return ready.TryGetValue(id,out e)?e:null;}
   internal static PackHandle[] Handles()=>packs.Select(p=>p.Handle).ToArray();
   internal static FieldInfo Field(Type type,string name){for(;type!=null;type=type.BaseType){var f=type.GetField(name,BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.DeclaredOnly);if(f!=null)return f;}throw new MissingFieldException(name);}
@@ -53,6 +55,7 @@ namespace ATT.Cosmetics
    var pack=new Pack{Manifest=manifest,Loader=loader,Handle=new PackHandle{PackId=manifest.packId,Version=manifest.version,Status=PackStatus.Queued}};
    pack.Entries=manifest.cosmetics.Select(c=>new Entry{Pack=pack,Spec=c,Id=CosmeticIds.FromSku(c.sku)}).ToArray();
    identities.Reserve(manifest);
+   foreach(var entry in pack.Entries)Definitions.Declare(entry.Id);
    packs.Add(pack);MelonLogger.Msg("COSMETICS_PACK_QUEUED "+manifest.packId+" version="+manifest.version);return pack.Handle;
   }
   internal static void Pump()
@@ -147,6 +150,7 @@ namespace ATT.Cosmetics
     foreach(var e in p.Entries){ready.Remove(e.Id);if(e.Definition!=null&&Purchasable.LoadedPurchasables!=null&&Purchasable.LoadedPurchasables.ContainsKey(e.Id)&&Purchasable.LoadedPurchasables[e.Id]==e.Definition)Purchasable.LoadedPurchasables.Remove(e.Id);}
     throw;
    }
+   foreach(var entry in p.Entries)Definitions.Complete(entry.Id,entry.Definition);
    MelonLogger.Msg("COSMETICS_PACK_READY "+p.Manifest.packId+" version="+p.Manifest.version+" bundle="+p.Manifest.bundleSha256);
    foreach(var e in p.Entries)MelonLogger.Msg("COSMETICS_REGISTERED id="+e.Id+" name="+e.Name+" category="+e.Category.name);
   }
@@ -176,7 +180,7 @@ namespace ATT.Cosmetics
   {
    p.Handle.Status=PackStatus.Failed;p.Handle.Error=error.Message;p.Loader=null;
    if(p.Locator!=null)Addressables.RemoveResourceLocator(p.Locator);if(p.Provider!=null)Addressables.ResourceManager.ResourceProviders.Remove(p.Provider);
-   foreach(var e in p.Entries){if(e.Definition!=null)Object.Destroy(e.Definition);if(e.Template!=null)Object.Destroy(e.Template);if(e.SkinColor!=null)Object.Destroy(e.SkinColor);}
+   foreach(var e in p.Entries){Definitions.Fail(e.Id,error);if(e.Definition!=null)Object.Destroy(e.Definition);if(e.Template!=null)Object.Destroy(e.Template);if(e.SkinColor!=null)Object.Destroy(e.SkinColor);}
    foreach(var h in p.Loads.Values)if(h.IsValid())Addressables.Release(h);p.Loads.Clear();
    if(p.Bundle!=null)p.Bundle.Unload(true);
    MelonLogger.Error("COSMETICS_PACK_FAILED "+p.Manifest.packId+": "+error);

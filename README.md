@@ -4,16 +4,17 @@ Create and share custom cosmetics for **A Township Tale on PC**. Export a pack f
 
 Supports skinned clothing, rigid accessories, transparent clothing selections, and additional skin-colour palettes. Install the API once, then add matching packs on the client and server. No SyncLib or UnlockCosmetics dependency is required.
 
-**[Download v0.2.0](https://github.com/calebv2/CosmeticsAPI/releases/tag/v0.2.0)** · [Creator guide](docs/CREATOR-GUIDE.md) · [C# API](docs/API-REFERENCE.md)
+**[Download v0.2.1](https://github.com/calebv2/CosmeticsAPI/releases/tag/v0.2.1)** · [Creator guide](docs/CREATOR-GUIDE.md) · [C# API](docs/API-REFERENCE.md)
 
 ## Downloads
 
 | File | Contents |
 |---|---|
-| `CosmeticsAPI-Kit-0.2.0.zip` | Client/server runtime, Unity creator package, Wayfarer sample outfits, optional skin palettes, and instructions. |
-| `CosmeticsAPI-Runtime-0.2.0.zip` | The two runtime DLLs for installing or updating the API. |
+| `CosmeticsAPI-Kit-0.2.1.zip` | Client/server runtime, Unity creator package, Wayfarer sample outfits, optional skin palettes, and instructions. |
+| `CosmeticsAPI-Wayfarer-Update-0.2.1.zip` | Runtime and updated Wayfarer pack merged into ready-to-copy Client/Server folders. |
+| `CosmeticsAPI-Runtime-0.2.1.zip` | The two runtime DLLs for installing or updating the API. |
 | `CosmeticsAPI-CreatorSDK-0.2.0.unitypackage` | Unity authoring tools, reference skeleton, material shader, and examples. |
-| `Wayfarer-CosmeticPack-1.0.0.zip` | Four ready-to-install sample cosmetics. Requires the API. |
+| `Wayfarer-CosmeticPack-1.0.1.zip` | Four ready-to-install sample cosmetics. Requires the API. |
 | `NaturalSkin-CosmeticPack-1.0.0.zip` | 32 additional natural skin tones. Requires API 0.2.0 or newer. |
 | `FantasySkin-CosmeticPack-1.0.0.zip` | 16 optional fantasy skin colours. Requires API 0.2.0 or newer. |
 
@@ -48,9 +49,13 @@ The server needs its API DLL and the identical `pack.json`, but no graphics bund
 | Veilweave Shirt | Shirts; transparent selection |
 | Oathbound Harness | Belts |
 | Trailwarden Kilt | Skirt |
-| Ironweave Hauberk | Shirts; chainmail |
+| Ironweave Hauberk | Shirts; chainmail with wrist-length sleeves |
 
 When migrating from the standalone outfit mods, remove `WayfarerWardrobe.dll` and `ClearShirt.dll`, if present, from client and server. They must not register the same items alongside this pack. Existing outfit IDs are preserved.
+
+Custom item previews use the actual cosmetic model fitted to the shop display. The transparent shirt has a visible shirt marker so its preview can still be selected. Update both the runtime and Wayfarer pack for the sleeve and preview changes.
+
+Version 0.2.1 also fixes custom clothing disappearing during avatar detail-level changes. Appearance updates wait for queued custom definitions and keep the previous valid appearance until the replacement is ready.
 
 The optional [Natural Skin](Samples/NaturalSkin) and [Fantasy Skin](Samples/FantasySkin) packs add choices to the native **Skin Color** category.
 
@@ -69,7 +74,7 @@ See the [creator guide](docs/CREATOR-GUIDE.md) for templates, rigging, materials
 
 ## Compatibility
 
-Version 0.2.0 supports existing schema-1 clothing packs and schema-2 skin palettes. Packs do not automatically download to other players. The API does not automatically fit arbitrary clothing, add clothing dye brushes, or support Quest/Android.
+Version 0.2.1 supports existing schema-1 clothing packs and schema-2 skin palettes. Packs do not automatically download to other players. The API does not automatically fit arbitrary clothing, add clothing dye brushes, or support Quest/Android.
 
 This is a preview release. Live multiplayer and save/rejoin verification is still pending. Check new cosmetics in both eyes, on the mannequin, and on another player's avatar before distributing your own pack.
 

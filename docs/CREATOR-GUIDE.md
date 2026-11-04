@@ -88,5 +88,7 @@ Empty-only and skin-only packs need no bundle. Do not install a pack through bot
 | Left eye only | Check custom shader stereo support and rebuild using the exporter. |
 | Hat blocks view | Enable Hide in first person and export again. |
 | Nothing appears | Confirm `COSMETICS_PACK_READY`, the correct wardrobe category, and matching API/pack files on client/server. |
+| Custom clothes disappear after an avatar detail change | Update clients and server to API 0.2.1, then restart. Each native detail level now has independent renderer instances. |
+| Avatar body missing while joining or changing outfits | Use API 0.2.1 on every client/server, install matching packs, and check for `COSMETICS_PACK_FAILED`. Queued custom definitions now finish loading before the new appearance is applied. |
 
 Before sharing your pack, check dressing/removal, both eyes, arm/body motion, the mannequin, another modded player's view, and save/rejoin.

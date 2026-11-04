@@ -1,13 +1,13 @@
 # Wayfarer sample pack
 
-Four cosmetic choices packaged for CosmeticsAPI. Install API 0.2.0 on client and server, then merge this pack's **Client** and **Server** folders into their respective game folders. Every viewing player needs the same pack. Restart after installation.
+Four cosmetic choices packaged for CosmeticsAPI. Install API 0.2.1 on client and server, then merge this pack's **Client** and **Server** folders into their respective game folders. Every viewing player needs the same pack. Restart after installation.
 
 | Cosmetic | Category | Saved ID |
 |---|---|---|
 | Veilweave Shirt | Shirts; transparent | 63925 |
 | Oathbound Harness | Belts | 63704 |
 | Trailwarden Kilt | Skirt | 52837 |
-| Ironweave Hauberk | Shirts; chainmail | 15096 |
+| Ironweave Hauberk | Shirts; wrist-length chainmail | 15096 |
 
 Remove the standalone `WayfarerWardrobe.dll` and `ClearShirt.dll`, if present, before installing this API pack. The saved IDs remain unchanged.
 

@@ -7,13 +7,13 @@ using MelonLoader;
 using MelonLoader.Utils;
 using UnityEngine;
 
-[assembly:MelonInfo(typeof(ATT.Cosmetics.ApiCore),"CosmeticsAPI","0.2.0","caleb")]
+[assembly:MelonInfo(typeof(ATT.Cosmetics.ApiCore),"CosmeticsAPI","0.2.1","caleb")]
 [assembly:MelonGame("Alta","A Township Tale")]
 namespace ATT.Cosmetics
 {
  public static class CosmeticsApi
  {
-  public const string Version="0.2.0";
+  public const string Version="0.2.1";
   public static string PacksDirectory=>Path.Combine(MelonEnvironment.UserDataDirectory,"CosmeticsAPI","Packs");
   /// <summary>Call from Melon initialization on the main thread. The client loader is never called by the server.</summary>
   public static PackHandle RegisterPack(PackManifest manifest,Func<byte[]> clientBundleLoader)

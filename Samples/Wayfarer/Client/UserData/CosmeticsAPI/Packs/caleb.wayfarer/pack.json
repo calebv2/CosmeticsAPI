@@ -2,9 +2,9 @@
     "schemaVersion": 1,
     "packId": "caleb.wayfarer",
     "displayName": "Wayfarer Wardrobe",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "bundleFile": "assets.bundle",
-    "bundleSha256": "f34eadc4b699b98cdd1b0e07e318ea34b2c34b6adae4e8652c44143bfbb9df73",
+    "bundleSha256": "d6c3546b2c4366c673c3a77db1e13580f736cf7bd0703ba3cfc120595b9e3036",
     "cosmetics": [
         {
             "sku": "mod-clear-shirt-19920",

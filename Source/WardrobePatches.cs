@@ -55,14 +55,14 @@ namespace ATT.Cosmetics
  {
   static void Postfix(PlayerCosmeticDefinition __instance,CustomizationPickup __result)
   {
-   var entry=Registry.Find(__instance.Hash);if(ApiCore.IsServer||entry==null||__result==null)return;
-   if(entry.Model!=null)
+   var entry=Registry.Find(__instance.Hash);if(ApiCore.IsServer||entry==null||__result==null||entry.Spec.isSkinTone)return;
+   try
    {
-    var model=Object.Instantiate(entry.Model,__result.transform,false);var filters=model.GetComponentsInChildren<MeshFilter>();var bounds=filters[0].sharedMesh.bounds;foreach(var f in filters.Skip(1))bounds.Encapsulate(f.sharedMesh.bounds);
-    float scale=__instance.Category.PickupScale;model.transform.localRotation=Quaternion.Euler(-90,0,0);model.transform.localScale=Vector3.one*scale;model.transform.localPosition=model.transform.localRotation*(-bounds.center*scale);
+    var nativePickup=__result as CosmeticPickup;
+    var tokenMaterial=entry.Spec.emptyVisual&&nativePickup!=null?(Material)Registry.Field(typeof(CosmeticPickup),"baseMaterial").GetValue(nativePickup):null;
+    PickupDisplay.Build(__result.gameObject,entry.Model,entry.Spec.emptyVisual,tokenMaterial);
    }
-   var label=new GameObject("Cosmetic name");label.transform.SetParent(__result.transform,false);label.transform.localPosition=new Vector3(0,-.12f,-.02f);
-   var text=label.AddComponent<TextMesh>();text.text=entry.Name.Replace(" ","\n");text.font=Resources.GetBuiltinResource<Font>("Arial.ttf");text.GetComponent<Renderer>().sharedMaterial=text.font.material;text.anchor=TextAnchor.MiddleCenter;text.alignment=TextAlignment.Center;text.fontSize=32;text.characterSize=.014f;text.color=Color.white;
+   catch(Exception error){MelonLoader.MelonLogger.Error("COSMETICS_DISPLAY_FAILED "+entry.Sku+": "+error.Message);}
   }
  }
 }
