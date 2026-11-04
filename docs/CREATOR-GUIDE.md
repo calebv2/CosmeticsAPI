@@ -2,6 +2,8 @@
 
 ## First export
 
+API 0.2.2 installs the bundled Wayfarer and skin palettes from its DLLs on startup. Additional exported creations still use the pack-folder workflow below. Use your own Pack ID and SKUs to avoid duplicating the bundled samples.
+
 Import the Creator SDK into a Unity 2020.3.23f1 **Built-in 3D** project, with Unity's standard built-in modules enabled (including AssetBundle, Animation, and JSONSerialize). URP/HDRP projects are not supported by this ATT exporter. The **Cosmetics API** menu contains the reference rig, starter accessory, and export commands. Create a pack through **Assets → Create → Cosmetics API → Cosmetic Pack** and edit it in the Inspector.
 
 The starter example is an original copper brooch. Duplicate its pack and prefab, then change the pack ID and SKU before making your own release. Its native template places it in the Belts category, where it replaces another belt/harness selection.

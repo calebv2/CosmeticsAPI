@@ -2,6 +2,8 @@
 
 Namespace: `ATT.Cosmetics`. Assembly: `CosmeticsAPI.dll`. Reference the client or server build appropriate to your mod. Register on the Unity main thread, normally from your Melon mod's `OnInitializeMelon`. Declare `[assembly: MelonAdditionalDependencies("CosmeticsAPI")]`.
 
+From 0.2.2, the runtime DLLs create the bundled Wayfarer and skin-palette files automatically. Folder discovery runs during initialization and later startup hooks, with duplicate prevention. Register additional creations with unique Pack IDs/SKUs; do not register the bundled sample IDs a second time. Existing edited pack files are preserved by the bundled installer.
+
 The zero-code folder workflow is preferred for ordinary content packs. Use C# registration when your existing mod should carry the manifest and graphics as embedded resources. The API does not require an extra per-pack mod DLL.
 
 ```csharp

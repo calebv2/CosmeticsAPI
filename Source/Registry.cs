@@ -54,6 +54,11 @@ namespace ATT.Cosmetics
    if(!ApiCore.IsServer&&manifest.cosmetics.Any(ManifestRules.NeedsModel)&&loader==null)throw new ArgumentNullException(nameof(loader));
    var pack=new Pack{Manifest=manifest,Loader=loader,Handle=new PackHandle{PackId=manifest.packId,Version=manifest.version,Status=PackStatus.Queued}};
    pack.Entries=manifest.cosmetics.Select(c=>new Entry{Pack=pack,Spec=c,Id=CosmeticIds.FromSku(c.sku)}).ToArray();
+   foreach(var entry in pack.Entries)
+   {
+    if((entry.Id==63925&&MelonMod.RegisteredMelons.Any(m=>m.Info.Name=="ClearShirt"))||
+     (new uint[]{63925,63704,52837,15096}.Contains(entry.Id)&&MelonMod.RegisteredMelons.Any(m=>m.Info.Name=="WayfarerWardrobe")))throw new InvalidOperationException("Remove legacy WayfarerWardrobe.dll/ClearShirt.dll when installing the API Wayfarer pack; saved IDs are preserved");
+   }
    identities.Reserve(manifest);
    foreach(var entry in pack.Entries)Definitions.Declare(entry.Id);
    packs.Add(pack);MelonLogger.Msg("COSMETICS_PACK_QUEUED "+manifest.packId+" version="+manifest.version);return pack.Handle;

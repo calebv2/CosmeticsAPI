@@ -1,6 +1,6 @@
 # Wayfarer sample pack
 
-Four cosmetic choices packaged for CosmeticsAPI. Install API 0.2.1 on client and server, then merge this pack's **Client** and **Server** folders into their respective game folders. Every viewing player needs the same pack. Restart after installation.
+Four cosmetic choices packaged for CosmeticsAPI. API 0.2.2 already includes and installs this sample automatically from its client/server DLLs. These exported folders are provided as a creator reference and for manual installation with older API versions.
 
 | Cosmetic | Category | Saved ID |
 |---|---|---|

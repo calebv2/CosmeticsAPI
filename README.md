@@ -1,94 +1,74 @@
 # CosmeticsAPI
 
-Create and share custom cosmetics for **A Township Tale on PC**. Export a pack from Unity, install it alongside CosmeticsAPI, and use it through the native cosmetic shop and wardrobe.
+Custom cosmetics and Unity creator tools for **A Township Tale on PC**.
 
-Supports skinned clothing, rigid accessories, transparent clothing selections, and additional skin-colour palettes. Install the API once, then add matching packs on the client and server. No SyncLib or UnlockCosmetics dependency is required.
-
-**[Download v0.2.1](https://github.com/calebv2/CosmeticsAPI/releases/tag/v0.2.1)** · [Creator guide](docs/CREATOR-GUIDE.md) · [C# API](docs/API-REFERENCE.md)
-
-## Downloads
-
-| File | Contents |
-|---|---|
-| `CosmeticsAPI-AllCosmetics-0.2.1.zip` | Ready-to-copy Client/Server folders with the API, all four Wayfarer outfits, and all 48 skin colours. Use this to install everything for play. |
-| `CosmeticsAPI-Kit-0.2.1.zip` | Client/server runtime, Unity creator package, Wayfarer sample outfits, optional skin palettes, and instructions. |
-| `CosmeticsAPI-Wayfarer-Update-0.2.1.zip` | Runtime and updated Wayfarer pack merged into ready-to-copy Client/Server folders. |
-| `CosmeticsAPI-Runtime-0.2.1.zip` | The two runtime DLLs for installing or updating the API. |
-| `CosmeticsAPI-CreatorSDK-0.2.0.unitypackage` | Unity authoring tools, reference skeleton, material shader, and examples. |
-| `Wayfarer-CosmeticPack-1.0.1.zip` | Four ready-to-install sample cosmetics. Requires the API. |
-| `NaturalSkin-CosmeticPack-1.0.0.zip` | 32 additional natural skin tones. Requires API 0.2.0 or newer. |
-| `FantasySkin-CosmeticPack-1.0.0.zip` | 16 optional fantasy skin colours. Requires API 0.2.0 or newer. |
+**[Download v0.2.2](https://github.com/calebv2/CosmeticsAPI/releases/tag/v0.2.2)** · [Creator guide](docs/CREATOR-GUIDE.md) · [C# API](docs/API-REFERENCE.md)
 
 ## Install
 
-Requires **PC A Township Tale**, **MelonLoader 0.7.3**, and a server where you can install mods. The creator tools use **Unity 2020.3.23f1**, Built-in 3D.
+1. Close the game and stop the server.
+2. Download `CosmeticsAPI-Runtime-0.2.2.zip`.
+3. Copy `Client/Mods/CosmeticsAPI.dll` into the client's **Mods** folder.
+4. Copy `Server/Mods/CosmeticsAPI.dll` into the server's **Mods** folder.
+5. Start the server and client. Every viewing player needs the client build.
 
-For the simplest complete installation, download **CosmeticsAPI-AllCosmetics-0.2.1.zip**. Copy **both `Mods` and `UserData` from its Client folder** into the client game folder. Copy **both `Mods` and `UserData` from its Server folder** into the actual server game folder. Merge folders and replace matching files, then restart. The API DLL alone adds no outfits or skin colours.
+**The DLLs create their UserData files automatically.** The client DLL contains the models and bundled manifests; the server DLL contains the matching manifests. No separate UserData upload is needed for the bundled cosmetics.
 
-When installing components separately:
+The client and server DLLs share a filename but are different builds. Use the correct one. Remove standalone `WayfarerWardrobe.dll` and `ClearShirt.dll`, if present, when switching to this API.
 
-1. Close the game and server.
-2. Copy the **Client** `CosmeticsAPI.dll` into the client's `Mods` folder.
-3. Copy the **Server** `CosmeticsAPI.dll` into the server's `Mods` folder. The two builds have the same filename; use the correct one.
-4. Choose a sample or exported pack. Merge its **Client** folder into the client game folder and its **Server** folder into the server game folder.
-5. Restart both. Every player who should see the cosmetics needs the same API and pack versions.
+Requires PC ATT with **MelonLoader 0.7.3**. No SyncLib or UnlockCosmetics dependency is required.
 
-In the complete kit, the DLLs are under `Runtime/Client/Mods` and `Runtime/Server/Mods`. The sample packs are under `Samples`.
-
-The client installs a pack like this:
-
-```text
-Mods/CosmeticsAPI.dll
-UserData/CosmeticsAPI/Packs/caleb.wayfarer/pack.json
-UserData/CosmeticsAPI/Packs/caleb.wayfarer/assets.bundle
-```
-
-The server needs its API DLL and the identical `pack.json`, but no graphics bundle. Skin-only packs need no bundle on either side. Packs load at startup; restart after changes.
-
-## Wayfarer sample
-
-[Wayfarer](Samples/Wayfarer) demonstrates a pack containing independently selectable cosmetic pieces:
+## Included cosmetics
 
 | Cosmetic | Category |
 |---|---|
 | Veilweave Shirt | Shirts; transparent selection |
 | Oathbound Harness | Belts |
 | Trailwarden Kilt | Skirt |
-| Ironweave Hauberk | Shirts; chainmail with wrist-length sleeves |
+| Ironweave Hauberk | Shirts; wrist-length chainmail |
+| 32 natural skin tones | Skin Color |
+| 16 fantasy skin colours | Skin Color |
 
-When migrating from the standalone outfit mods, remove `WayfarerWardrobe.dll` and `ClearShirt.dll`, if present, from client and server. They must not register the same items alongside this pack. Existing outfit IDs are preserved.
+The [Wayfarer sample](Samples/Wayfarer) preserves existing outfit IDs. Shop previews use the actual model fitted to the display space; the clear shirt uses a visible selection marker.
 
-Custom item previews use the actual cosmetic model fitted to the shop display. The transparent shirt has a visible shirt marker so its preview can still be selected. Update both the runtime and Wayfarer pack for the sleeve and preview changes.
+On startup, files are installed under `UserData/CosmeticsAPI/Packs`. Existing matching files are reused. Files created and managed by the installer can be updated automatically; edited or independently installed packs are preserved. Startup logs report the scan path, manifest count, and `COSMETICS_PACK_READY` for registered packs.
 
-Version 0.2.1 also fixes custom clothing disappearing during avatar detail-level changes. Appearance updates wait for queued custom definitions and keep the previous valid appearance until the replacement is ready.
+To stop automatic installation of the bundled packs, set `installBundledPacks` to `false` in the generated `UserData/CosmeticsAPI/settings.json`. Remove any unwanted bundled pack folders while the game/server is stopped. Other exported packs can still be installed normally.
 
-The optional [Natural Skin](Samples/NaturalSkin) and [Fantasy Skin](Samples/FantasySkin) packs add choices to the native **Skin Color** category.
+## Creator kit
 
-## Create a pack
+The release provides:
 
-1. Import the Creator SDK into a Unity **2020.3.23f1 Built-in 3D** project.
-2. Use **Cosmetics API → Create Starter Accessory Pack** for a working authoring example, or **Assets → Create → Cosmetics API → Cosmetic Pack** for a new pack.
-3. Set a unique Pack ID, a version, and a permanent SKU for each cosmetic. Assign your prefab and a native template ID for its wardrobe category.
+- **Runtime ZIP:** the two self-contained DLLs and installation instructions.
+- **Creator SDK:** a Unity package with authoring inspectors, reference skeleton, material shader, and examples.
+- **Complete kit:** runtime, SDK, exported sample packs, and creator documentation.
+
+To create a pack:
+
+1. Import `CosmeticsAPI-CreatorSDK-0.2.0.unitypackage` into a **Unity 2020.3.23f1 Built-in 3D** project.
+2. Use **Cosmetics API → Create Starter Accessory Pack** for an authoring example, or **Assets → Create → Cosmetics API → Cosmetic Pack** for a new pack.
+3. Set a unique Pack ID, version, and permanent SKU for each cosmetic. Assign your prefab and a native template ID for the wardrobe category.
 4. Use **Skinned** for clothing bound to the reference skeleton, or **Rigid** for an accessory attached to one bone.
 5. Select the pack and click **Export Client + Server Pack** in the Inspector.
-6. Share the exported Client and Server folders with the API installation instructions.
 
-For skin colours, use **Cosmetics API → Create Skin Tone Palettes**, select either palette under `Assets/CosmeticsAPI/Samples`, and edit its **Tones**. Each tone has shadow, midtone, and highlight colours. Click **Export Client + Server Skin Palette** to export it.
+Install exported packs under `UserData/CosmeticsAPI/Packs` on client/server. Model bundles are client-only. The sample data in this repository is already bundled in the runtime DLLs.
 
-See the [creator guide](docs/CREATOR-GUIDE.md) for templates, rigging, materials, stable IDs, and troubleshooting. Mods can also register packs through the [C# API](docs/API-REFERENCE.md).
+For custom skin palettes, choose **Cosmetics API → Create Skin Tone Palettes**, select either palette under `Assets/CosmeticsAPI/Samples`, and edit **Tones**. Each tone has shadow, midtone, and highlight colours. Export both client/server manifests from the Inspector.
+
+See the [creator guide](docs/CREATOR-GUIDE.md) for rigging, templates, materials, stable IDs, and troubleshooting. Mods can register folders or carry their own embedded packs through the [C# API](docs/API-REFERENCE.md).
 
 ## Compatibility
 
-Version 0.2.1 supports existing schema-1 clothing packs and schema-2 skin palettes. Packs do not automatically download to other players. The API does not automatically fit arbitrary clothing, add clothing dye brushes, or support Quest/Android.
+Supports schema-1 clothing and schema-2 skin palettes. The runtime also preserves the previous complete avatar appearance while a replacement loads, and gives native detail levels independent clothing renderers.
 
-This is a preview release. Live multiplayer and save/rejoin verification is still pending. Check new cosmetics in both eyes, on the mannequin, and on another player's avatar before distributing your own pack.
+Additional custom packs do not automatically download to other players. The API does not automatically fit arbitrary models, add clothing dye brushes, or support Quest/Android. This is a preview release; live multiplayer and save/rejoin verification remain ongoing.
 
 ## Build from source
 
-Creators using the Unity exporter do not need to rebuild the API. To build the runtime itself, clone this repository and provide your installed client, server, and Unity editor paths:
+Creators using the exporter do not need to rebuild the API. To build the runtime, clone this repository and provide your installed game and Unity editor paths:
 
 ```powershell
 ./Build.ps1 -ClientGame 'C:\ATTClient' -ServerGame 'C:\ATTServer' -UnityEditor 'C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor'
 ```
 
-The script writes separate client and server DLLs to `Build`. Game and MelonLoader assemblies are read from your installations and are not included in this repository.
+Separate DLLs are written under `Build/Client/Mods` and `Build/Server/Mods`. The build embeds the bundled content from `Samples`. Game and MelonLoader assemblies are read from your installations and are not distributed here.
